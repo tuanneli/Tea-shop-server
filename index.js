@@ -41,10 +41,12 @@ const start = async () => {
     try {
         await mongoose.connect(process.env.DB_URL);
         app.listen(PORT, () => console.log(`The post has been started on PORT ${PORT}`));
-
+        // app.use('/.netlify/functions', )
     } catch (e) {
         console.log(e)
     }
 }
+
+// export default serverless(app)
 
 start();
